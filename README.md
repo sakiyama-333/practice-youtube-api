@@ -1,34 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# このアプリについて
+最近Next.jsを勉強し始め、一通り動画教材を視聴し終わったので
+「Next.jsを使って何か作ってみよう！」という事で作った簡単なアプリです。
 
-## Getting Started
+youtubeDataAPIを使用し、指定の再生リストに含まれる動画一覧を取得します。
+サムネイルをクリックすると、動画再生ページへ遷移します。
 
-First, run the development server:
+# 使用する際の注意点
+* .env.localファイルを作成し、URLとAPIkeyを格納する必要があります
+  * ルートディレクトリに.env.localファイルを作成
+  * YOUTUBE_APIにURLのパラメーターより前の部分を格納
+    (https://www.googleapis.com/youtube/v3/)
+  * YOUTUBE_API_KEYに発行したAPIkeyを格納
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+⚠APIkeyは絶対に外部に漏らさないように気を付けてください。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* 何かしらのエラーが出てデータを取得できなくても、処理は実行される
+  * 今回は練習ということで、fetchを使って簡単にデータを取得しています。
+    エラーが出た場合の処理は記述していません。
+    エラーが出たら特定の処理に移行したい場合は記述を変更してください。
+    axiosを使用したデータ取得に変更しても良いかもしれません！
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* create-next-appを使用して、簡単に環境構築をしました。
+  * スタイリングもcreate-next-appで自動的に生成されたものを使用しています。
+    自分好みのスタイリング方法を導入して使ってみてください！
