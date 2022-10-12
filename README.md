@@ -1,4 +1,4 @@
-![スクリーンショット](./public/practice-youtube-api.gif)
+<p align="center"><img src="./public/practice-youtube-api.gif" alt="スクリーンショット" /></p>
   
   
 # このアプリについて
@@ -37,4 +37,3 @@ TLC Japan チャンネルで公開されている米国初の 5 つ子ちゃん�
 👉create-next-app を使用して、簡単に環境構築をしました。  
  スタイリングも create-next-app で自動的に生成されたものを使用しています。  
  自分好みのスタイリング方法を導入して使ってみてください！
-
